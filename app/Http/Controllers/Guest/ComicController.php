@@ -69,15 +69,32 @@ class ComicController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+
+        $data = [
+            "comic" => $comic
+        ];
+
+        return view('comics.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic->title = $data["title"];
+        $comic->description = $data["description"];
+        $comic->price = $data["price"];
+        $comic->series = $data["series"];
+        $comic->sale_date = $data["sale_date"];
+        $comic->type = $data["type"];
+        $comic->thumb = $data["thumb"];
+        $comic->save();
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
