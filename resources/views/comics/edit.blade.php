@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1 class="text-center display-4 fw-bold text-primary my-4">MODIFICA: {{ $comic->title }}</h1>
+    <h1 class="text-center display-4 fw-bold text-primary my-5">MODIFICA: {{ $comic->title }}</h1>
 
     <form action="{{ route('comics.update', $comic->id) }}" method="POST">
         @method('PUT')

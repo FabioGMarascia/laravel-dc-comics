@@ -3,7 +3,7 @@
 @section('title', 'COMICS LIST')
 
 @section('content')
-    <h1 class="text-center display-3 fw-bold text-primary mt-4">COMICS LIST</h1>
+    <h1 class="text-center display-3 fw-bold text-primary my-4">COMICS LIST</h1>
 
     <div class="row mx-0 justify-content-center">
         <div class="col-10 px-0 rounded">

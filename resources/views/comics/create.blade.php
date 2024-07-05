@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1 class="text-center display-3 fw-bold text-primary mt-4">ADD A COMIC</h1>
+    <h1 class="text-center display-4 fw-bold text-primary my-5">ADD A COMIC</h1>
 
     <form action="{{ route('comics.store') }}" method="POST">
         @csrf
