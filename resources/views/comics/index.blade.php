@@ -3,7 +3,7 @@
 @section('title', 'COMICS LIST')
 
 @section('content')
-    <h1 class="text-center display-3 fw-bold text-warning mt-4">COMICS LIST</h1>
+    <h1 class="text-center display-3 fw-bold text-primary mt-4">COMICS LIST</h1>
 
     <div class="row mx-0 justify-content-center">
         <div class="col-10 px-0 rounded">
@@ -28,8 +28,8 @@
                             <th scope="row">{{ $index }}</th>
                             <td>{{ $comic->title }}</td>
                             <td><a href="/comics/{{ $index + 1 }}">
-                                    <button class="btn my-3 fs-4 fw-bold border border-2">
-                                        <span class="subtitle">DESCRIPTION</span>
+                                    <button class="btn my-3 fs-4 fw-bold border border-2 bg-black text-primary">
+                                        DESCRIPTION
                                     </button>
                                 </a></td>
                             <td>{{ $comic->price }}</td>

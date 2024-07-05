@@ -13,7 +13,12 @@
                     <nav class="fw-bold fs-4 text-end">
 
                         <a href="{{ route('comics.index') }}"
-                            class="px-3 text-decoration-none text-dark py-4 rounded-5 @if (Route::currentRouteName() == 'home') active @endif">HOME</a>
+                            class="px-3 text-decoration-none text-dark py-4 rounded-5 @if (Route::currentRouteName() == 'comics.index') active @endif">COMICS
+                            LIST</a>
+
+                        <a href="{{ route('comics.create') }}"
+                            class="px-3 text-decoration-none text-dark py-4 rounded-5 @if (Route::currentRouteName() == 'comics.create') active @endif">COMICS
+                            FORM</a>
 
                     </nav>
                 </div>
