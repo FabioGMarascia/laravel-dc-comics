@@ -8,39 +8,32 @@
     <div class="row mx-0 justify-content-center">
         <div class="col-10 px-0 rounded">
 
-            <table class="table border border-5 border-black fw-bold text-uppercase">
-                <thead>
-                    <tr class="text-center">
-                        <th scope="col" class="text-primary">#</th>
-                        <th scope="col" class="text-primary">Title</th>
-                        <th scope="col" class="text-primary">Description</th>
-                        <th scope="col" class="text-primary">Price</th>
-                        <th scope="col" class="text-primary">Series</th>
-                        <th scope="col" class="text-primary">Sale Date</th>
-                        <th scope="col" class="text-primary">Type</th>
-                        <th scope="col" class="text-primary">Artists</th>
-                    </tr>
-                </thead>
+            <div class="row mx-0 my-4 justify-content-around">
+                @foreach ($comics as $index => $comic)
+                    <div class="col-3 px-0 my-4 px-4">
+                        <div class="card cardBox border-2">
+                            <img src="{{ $comic['thumb'] }}" class="card-img object-fit-cover"></img>
 
-                <tbody>
-                    @foreach ($comics as $index => $comic)
-                        <tr class="text-center">
-                            <th scope="row">{{ $index }}</th>
-                            <td>{{ $comic->title }}</td>
-                            <td><a href="/comics/{{ $index + 1 }}">
-                                    <button class="btn my-3 fs-4 fw-bold border border-2 bg-black text-primary">
-                                        DESCRIPTION
-                                    </button>
-                                </a></td>
-                            <td>{{ $comic->price }}</td>
-                            <td>{{ $comic->series }}</td>
-                            <td>{{ $comic->sale_date }}</td>
-                            <td>{{ $comic->type }}</td>
-                            <td>{{ $comic->artists }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                            <div
+                                class="card-img-overlay cardInfoBox text-white fw-bold text-center p-2 bg-black overflow-auto lh-lg">
+                                <div><span class="subtitle">TITLE: </span> <br>{{ $comic['title'] }}</div>
+                                <div><span class="subtitle">TYPE: </span>{{ $comic['type'] }}</div>
+                                <div><span class="subtitle">GENRES: </span>{{ $comic['series'] }}</div>
+                                <div><span class="subtitle">PRICE: </span>{{ $comic['price'] }}</div>
+                                <div><span class="subtitle">SALE DATE: </span>{{ $comic['sale_date'] }}</div>
+                                <div>
+                                    <a href="/comics/{{ $index + 1 }}">
+                                        <button class="btn my-3 fs-4 fw-bold border border-2">
+                                            <span class="subtitle">DESCRIPTION</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                @endforeach
+            </div>
 
         </div>
     </div>
