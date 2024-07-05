@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'COMIC DESCRIPTION')
+@section('title', 'COMIC DETAILS')
 
 @section('content')
 
-    <h1 class="text-center display-3 fw-bold text-primary mt-4">COMIC DESCRIPTION</h1>
+    <h1 class="text-center display-3 fw-bold text-primary mt-4">COMIC DETAILS</h1>
 
     <div class="row mx-0  justify-content-center">
         <div class="col-10 px-0 ">

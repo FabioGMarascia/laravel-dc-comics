@@ -16,15 +16,11 @@
 
                             <div
                                 class="card-img-overlay cardInfoBox text-white fw-bold text-center p-2 bg-black overflow-auto lh-lg">
-                                <div><span class="subtitle">TITLE: </span> <br>{{ $comic['title'] }}</div>
-                                <div><span class="subtitle">TYPE: </span>{{ $comic['type'] }}</div>
-                                <div><span class="subtitle">GENRES: </span>{{ $comic['series'] }}</div>
-                                <div><span class="subtitle">PRICE: </span>{{ $comic['price'] }}</div>
-                                <div><span class="subtitle">SALE DATE: </span>{{ $comic['sale_date'] }}</div>
+                                <div><span class="subtitle fs-4">TITLE</span> <br>{{ $comic['title'] }}</div>
                                 <div>
                                     <a href="/comics/{{ $index + 1 }}">
                                         <button class="btn my-3 fs-4 fw-bold border border-2">
-                                            <span class="subtitle">DESCRIPTION</span>
+                                            <span class="subtitle">DETAILS</span>
                                         </button>
                                     </a>
                                 </div>
