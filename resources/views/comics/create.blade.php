@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="col-3">
-                        <button class="btn text-center w-100 bg-white fw-bold text-primary">
+                        <button class="btn text-center w-100 bg-white fw-bold text-black fs-5">
                             ADD COMICS
                         </button>
                     </div>
