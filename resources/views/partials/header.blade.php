@@ -17,8 +17,8 @@
                             LIST</a>
 
                         <a href="{{ route('comics.create') }}"
-                            class="px-3 text-decoration-none text-dark py-4 rounded-5 @if (Route::currentRouteName() == 'comics.create') active @endif">COMICS
-                            FORM</a>
+                            class="px-3 text-decoration-none text-dark py-4 rounded-5 @if (Route::currentRouteName() == 'comics.create') active @endif">ADD
+                            NEW COMIC</a>
 
                     </nav>
                 </div>
