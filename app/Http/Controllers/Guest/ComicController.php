@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\DB;
 
 class ComicController extends Controller
 {
@@ -31,7 +32,21 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        DB::table('Comics')->insert([
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'price' => $data['price'],
+            'series' => $data['series'],
+            'sale_date' => $data['sale_date'],
+            'type' => $data['type'],
+            'thumb' => $data['thumb'],
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return redirect()->route('comics.index');
     }
 
     /**

@@ -26,6 +26,7 @@
                     <div><span class="subtitle">GENRES: </span>{{ $comic['series'] }}</div>
                     <div><span class="subtitle">SALE DATE: </span>{{ $comic['sale_date'] }}</div>
                     <div><span class="subtitle fs-4">DESCRIPTION: </span> <br>{{ $comic['description'] }}</div>
+                    <div><button class="btn fw-bold fs-5 bg-primary text text-center mt-3">BUY NOW</button></div>
 
                 </div>
             </div>

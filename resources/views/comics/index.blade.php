@@ -16,10 +16,11 @@
 
                             <div
                                 class="card-img-overlay cardInfoBox text-white fw-bold text-center p-2 bg-black overflow-auto lh-lg">
-                                <div><span class="subtitle fs-4">TITLE</span> <br>{{ $comic['title'] }}</div>
+                                <div class="mt-5 fs-5"><span class="subtitle fs-3">TITLE</span> <br>{{ $comic['title'] }}
+                                </div>
                                 <div>
                                     <a href="/comics/{{ $index + 1 }}">
-                                        <button class="btn my-3 fs-4 fw-bold border border-2">
+                                        <button class="btn mt-5 fs-4 fw-bold border border-2">
                                             <span class="subtitle">DETAILS</span>
                                         </button>
                                     </a>
