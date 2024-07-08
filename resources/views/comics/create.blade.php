@@ -6,6 +6,16 @@
 
     <h1 class="text-center display-4 fw-bold text-primary my-5">ADD A COMIC</h1>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{ route('comics.store') }}" method="POST">
         @csrf
 
@@ -46,6 +56,9 @@
                     <div class="col-11 px-0 pb-4">
                         <label class="py-2 text-primary fw-bold">DESCRIPTION</label>
                         <textarea class="form-control" aria-label="With textarea" name="description" placeholder="Description"></textarea>
+                        @error('description')
+                            <div>{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="col-3">
