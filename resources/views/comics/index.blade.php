@@ -15,23 +15,32 @@
                             <img src="{{ $comic['thumb'] }}" class="card-img object-fit-cover"></img>
 
                             <div class="card-img-overlay cardInfoBox text-white fw-bold text-center p-2 bg-black lh-lg">
+
                                 <div class="mt-5 fs-5"><span class="subtitle fs-3">TITLE</span> <br>{{ $comic['title'] }}
                                 </div>
                                 <div>
                                     <a href="/comics/{{ $index + 1 }}">
-                                        <button class="btn mt-5 fs-4 fw-bold border border-2 w-50">
-                                            <span class="subtitle">DETAILS</span>
+                                        <button class="btn mt-5 fs-4 fw-bold border border-4 w-50 border-warning">
+                                            <span class="text-warning">DETAILS</span>
                                         </button>
                                     </a>
-
                                 </div>
+
                                 <a href="/comics/{{ $index + 1 }}/edit">
-                                    <div><button class="btn fw-bold fs-4 mt-5 border border-2 w-50">
-                                            <span class="subtitle">EDIT
-                                            </span>
-                                        </button>
-                                    </div>
+                                    <button class="btn fw-bold fs-4 mt-5 border border-4 w-50 border-success">
+                                        <span class="text-success">EDIT
+                                        </span>
+                                    </button>
                                 </a>
+
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn fw-bold fs-4 mt-5 border border-4 w-50 border-danger">
+                                        <span class="text-danger">DELETE
+                                        </span>
+                                    </button>
+                                </form>
 
                             </div>
 
