@@ -49,13 +49,13 @@ class ComicController extends Controller
         // return redirect()->route('comics.index');
 
         $data = $request->validate([
-            "title" => "required|min:3|max:255",
+            "title" => "required|min:3|max:200",
             "description" => "required|min:3|max:255",
-            "price" => "required",
+            "price" => "required|decimal:2|min:0.99|max:999.99",
             "series" => "required",
             "sale_date" => "required",
             "type" => "required",
-            "thumb" => "required",
+            "thumb" => "required|max:255",
         ]);
 
         $newComic = new Comic();
@@ -113,13 +113,13 @@ class ComicController extends Controller
         // $comic->save();
 
         $data = $request->validate([
-            "title" => "required|min:3|max:255",
+            "title" => "required|min:3|max:200",
             "description" => "required|min:3|max:255",
-            "price" => "required",
+            "price" => "required|decimal:2|min:0.99|max:999.99",
             "series" => "required",
             "sale_date" => "required",
             "type" => "required",
-            "thumb" => "required",
+            "thumb" => "required|max:255",
         ]);
 
         $comic->update($data);
