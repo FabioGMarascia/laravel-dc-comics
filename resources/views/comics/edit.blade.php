@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <h1 class="text-center display-4 fw-bold text-primary my-5">MODIFICA: {{ $comic->title }}</h1>
+    <h1 class="text-center display-4 fw-bold text-primary my-5">EDIT: {{ $comic->title }}</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
